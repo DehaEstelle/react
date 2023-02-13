@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReactJs Project</title>
+
+    <!-- Librairies react -->
+    <script src="assets/js/react.development.js"></script>
+    <script src="assets/js/react-dom.development.js"></script>
+
+    <!-- Librairie babel  -->
+    <script src="assets/js/babel.min.js"></script>
+
+    <style>
+        .heading{
+            color: cadetblue;
+        }
+    </style>
+</head>
+<body>
+    <div id="root">
+        <script type="text/babel">
+
+            /* En procedurale*/
+
+            // const Hello = (props) =>{
+            //     return (
+            //         <div className="heading">
+            //             <h1>{props.message}</h1>
+            //             <p>{props.subtitle}</p>
+
+            //             </div>
+            //     )
+            // }
+
+            // Rendu dans la DOM
+            // ReactDOM.render(
+            //     <Hello message="Ceci est du ReactJs" subtitle="Du REact JS"/>,
+            //         document.getElementById('root')
+            // );
+            
+            /*En POO*/
+            
+            class Hello extends React.Component {
+
+                render() {
+                    // Lecture seule pour les props
+                    // this.props.message = "Hello Angular";
+                    
+                    return(
+                        <div className="heading">
+                            <h1>{this.props.message}</h1>
+                            <p>{this.props.subtitle}</p>
+                            
+                        </div>
+                    )
+                }
+            }
+                    
+            // Rendu dans la DOM
+            ReactDOM.render(
+                <Hello message="Hello React" subtitle="Enjoy ! "/>,
+                    document.getElementById('root')
+            );
+        </script>
+    </div>
+</body>
+</html>
