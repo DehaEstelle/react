@@ -25,19 +25,9 @@
         <p id="demo"></p>
 
         <script type="text/babel">
-            function Football() {
-                const shoot = (a, b) => {
-                    alert(b.type);
-                }
-
-                return (
-                    <button onClick={(event) => shoot("Goal!", event)}>Take the shot!</button>
-                );
-            }
-
             const root = ReactDOM.createRoot(document.getElementById('root'));
-            root.render(<Football />);
         </script>
+        root.render(<h1>Hello, world!</h1>);
     </div>
 </body>
 </html>
